@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+section {
+    font-size: large;
+}
+
+#overview h1 {
+    color: green;
+    font-family: sans-serif;
+    height: 100px;
+    width: 100%;
+    text-align: left;
+    margin-left: 85px;
+    margin-top: 50px;
+}
+
+#filters div {
+    display: inline-block;
+    /* margin-right: 20px;
+      margin-left: 5px; */
+    margin-bottom: 10px;
+}
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 34px;
+
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+}
+
+.slider:before {
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+
+}
+
+input:checked + .slider {
+    background-color: green;
+
+
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px green;
+
+
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(20px);
+
+
+}
+
+
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.sinDatos {
+    border-style: double;
+    border-color: gray;
+}
+
+.sinDatos label {
+    color: red;
+}
+
+.registros {
+    width: 100%;
+    text-align: left;
+}
+
+#exportar-excel{
+    display: inline-block;
+}
+
+#monitor-form{
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+}
+
+.buttons{
+    text-align: right;
+    width: 52%;
+}
+
+#table-head{
+    display: none;
+}
+
+#mensaje-inicial{
+    color: cadetblue;
+
+}
+
+#registros{
+    display: none;
+    text-align: left;
+}
+
+
+

@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+    <script src="https://unpkg.com/axios@0.26.1/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="/static/index.css">
+
+
+
+</head>
+
+<body>
+<div class="container">
+
+
+        <section id="overview">
+            <h1>Monitor Buckland</h1>
+        </section>
+        <section id="filters">
+            <form id="monitor-form" name="form-filter" method="get"  >
+                <div>
+                    <label for="fecha-inicio"  >Fecha Inicio:</label>
+                    <br />
+                    <input type="date" id="fecha-inicio" name="fechaInicio" class="btn btn-light btn-outline-secondary" value=""/>
+                </div>
+
+                <div>
+                    <label for="fecha-fin">Fecha Fin:</label>
+                    <br />
+                    <input type="date" id="fecha-fin" name="fechaFin" class="btn btn-light btn-outline-secondary" value=""/>
+                </div>
+
+                <div>
+                    <label class="switch" >
+                        <input type="checkbox" id="check-slider" />
+                        <span class="slider round"></span>
+                    </label>
+                    <label>auto update</label>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-light btn-outline-success btn-sm mb-3" id="button-monitor">Buscar</button>
+                </div>
+
+            </form>
+            <form id="exportar-excel">
+                <button class="btn btn-light btn-outline-success btn-sm mb-3">exportar</button>
+            </form>
+        </section>
+        <hr>
+        <div>
+            <label id="mensaje-inicial">Aplique los filtros requeridos y haga click en buscar</label>
+            <div id="table-container">
+                <table class="table table-bordered table-striped" id="table-head">
+                    <thead class="table-light" >
+                    <tr>
+                        <th>#</th>
+                        <th>CLIENTE</th>
+                        <th>CLAVE PEDIMENTO</th>
+                        <th>TIPO OPERACION</th>
+                        <th>REFERENCIA</th>
+                        <th>PEDIMENTO</th>
+                        <th>REMESA</th>
+                        <th>CAJA</th>
+                        <th>SELLO</th>
+                        <th>DODA</th>
+                        <th>CP FOLIOS</th>
+                        <th>CRUZE/SOIA</th>
+                        <th>USUARIO</th>
+                        <th>TIEMPO RECIBO BGTS</th>
+                        <th>TIEMPO ACG CONFIRMADO</th>
+                        <th>FECHA CCP</th>
+                        <th>FECHA DE REMESA</th>
+                    </tr>
+                    </thead>
+                    <tbody id="table-data">
+                    </tbody>
+                </table>
+            </div>
+            <label id="registros"></label>
+
+
+
+
+    </div>
+</div>
+
+<script src="/static/index.js" ></script>
+</body>
+
+</html>
